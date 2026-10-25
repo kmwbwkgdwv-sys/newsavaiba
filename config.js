@@ -275,9 +275,9 @@ DS.config = {
   // 「プレイヤーID + 4桁パスワード」でデータを別の端末に引き継げるようになります。
   CLOUD: {
     // ↓ Firebase の apiKey を '' の間に貼り付ける（例: 'AIzaSyB...'）
-    apiKey: '',
+    apiKey: 'AIzaSyDNDeSkWsKiPrQmf3m78kkZnd7s_vAqaCk',
     // ↓ Realtime Database の URL を '' の間に貼り付ける（例: 'https://xxxx-default-rtdb.asia-southeast1.firebasedatabase.app'）
-    databaseURL: '',
+    databaseURL: 'https://dadasabaiba-d19b3-default-rtdb.asia-southeast1.firebasedatabase.app',
     emailDomain: 'player.survivors-arena.game',   // 内部用（メールは送られません）
     autoSaveSec: 15,
   },
