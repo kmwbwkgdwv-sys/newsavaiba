@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#1b1440">
+  <meta name="description" content="最大4人で協力プレイできるサバイバー系アクションゲームのロビー画面">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Survivors Arena</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 上部バー：プレイヤー情報とコイン -->
+    <header class="topbar">
+      <button class="profile" id="profile-btn" aria-label="プレイヤー情報（名前の変更・引き継ぎ）">
+        <span class="profile-face" id="profile-face"></span>
+        <span class="profile-lv" id="profile-lv">Lv 1</span>
+        <span class="profile-text">
+          <span class="profile-name"><span id="profile-name"></span><span class="pencil" aria-hidden="true">✎</span></span>
+          <span class="profile-stats"><b class="c-atk">ATK</b> <span id="top-atk"></span> <b class="c-hp">HP</b> <span id="top-hp"></span></span>
+        </span>
+      </button>
+      <div class="coin-pill">
+        <span class="coin-icon" id="coin-icon"></span>
+        <span id="coin-value">0</span>
+        <button class="coin-plus" id="coin-plus" aria-label="コインを追加（テスト用）">＋</button>
+      </div>
+    </header>
+
+    <!-- 3つの画面を横に並べて、下のバーで切り替える -->
+    <main class="screens">
+      <div class="screens-track" id="screens-track">
+        <section class="screen screen-gacha" id="screen-gacha" aria-label="ガチャ"></section>
+        <section class="screen screen-lobby" id="screen-lobby" aria-label="ロビー"></section>
+        <section class="screen screen-equip" id="screen-equip" aria-label="装備"></section>
+      </div>
+    </main>
+
+    <!-- 下部ナビゲーション -->
+    <nav class="bottombar" id="bottombar">
+      <button class="nav-btn" data-screen="0"><span class="nav-icon" data-icon="gacha"></span><span class="nav-label">ガチャ</span></button>
+      <button class="nav-btn active" data-screen="1"><span class="nav-icon" data-icon="lobby"></span><span class="nav-label">ロビー</span></button>
+      <button class="nav-btn" data-screen="2"><span class="nav-icon" data-icon="equip"></span><span class="nav-label">装備</span></button>
+    </nav>
+
+    <!-- ロビー（ルーム）画面：作成・参加後に表示 -->
+    <div class="room hidden" id="room"></div>
+
+    <div id="modal-root"></div>
+    <div id="toast-root"></div>
+  </div>
+
+  <noscript>このゲームを遊ぶには JavaScript を有効にしてください。</noscript>
+
+  <script src="config.js"></script>
+  <script src="gameConfig.js"></script>
+  <script src="state.js"></script>
+  <script src="art.js"></script>
+  <script src="gameArt.js"></script>
+  <script src="charArt.js"></script>
+  <script src="ui.js"></script>
+  <script src="sound.js"></script>
+  <script src="settings.js"></script>
+  <script src="cloud.js"></script>
+  <script src="net.js"></script>
+  <script src="lobby.js"></script>
+  <script src="gacha.js"></script>
+  <script src="equip.js"></script>
+  <script src="mission.js"></script>
+  <script src="sim.js"></script>
+  <script src="render.js"></script>
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
